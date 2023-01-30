@@ -21,5 +21,9 @@
     xdg-hyprland.packages.${pkgs.system}.hyprland-share-picker
     xclip
     wl-clipboard
+    pavucontrol
+    wget
+    firefox
+    vscode
     ];
 }
