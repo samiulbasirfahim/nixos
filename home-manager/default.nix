@@ -2,7 +2,7 @@
     imports = [
         ./config.nix
         ./packages
-        ./dotfiles
+        ../dotfiles
         ./shell
         ./git.nix
     ];
