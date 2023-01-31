@@ -30,5 +30,8 @@
     firefox
     jupyter
     nix-prefetch-github
+    vscode
+    wlr-randr
+    wf-recorder
     ];
 }
