@@ -5,8 +5,6 @@ let
   pythonEnv = pkgs.python39.withPackages (ps: with ps;
     [
         pyautogui
-        numpy
-        scikit-learn
     ]);
 
 in

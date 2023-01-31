@@ -4,11 +4,15 @@
     ...
 }: {
     home.packages = with pkgs; [
+    grim
+    slurp
+    libnotify
     lxappearance
     neovim
     swaybg
     kitty
     rofi
+    dunst
     wlogout
     rnix-lsp
     pamixer
@@ -24,6 +28,7 @@
     pavucontrol
     wget
     firefox
-    vscode
+    jupyter
+    nix-prefetch-github
     ];
 }
