@@ -33,5 +33,6 @@
     vscode
     wlr-randr
     wf-recorder
+    glib
     ];
 }

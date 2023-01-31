@@ -9,9 +9,10 @@
       url = "github:hyprwm/hyprland/v0.20.1beta";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    xdg-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
   };
 
-  outputs = {self, nixpkgs, hyprland, home-manager, ... }@inputs:
+  outputs = {self, nixpkgs, hyprland, home-manager, xdg-hyprland, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -33,7 +34,7 @@
       homeConfigurations = {
         "fahim@nixos" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = { inherit inputs;};
+          extraSpecialArgs = { inherit inputs self xdg-hyprland; };
           modules = [ 	            
             ./home-manager
             ];
