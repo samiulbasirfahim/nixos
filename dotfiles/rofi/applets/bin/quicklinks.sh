@@ -11,7 +11,7 @@ theme="$type/$style"
 
 # Theme Elements
 prompt='Quick Links'
-mesg="Using '$BROWSER' as web browser"
+mesg="Using Firefox as web browser"
 
 if [[ ( "$theme" == *'type-1'* ) || ( "$theme" == *'type-3'* ) || ( "$theme" == *'type-5'* ) ]]; then
 	list_col='1'

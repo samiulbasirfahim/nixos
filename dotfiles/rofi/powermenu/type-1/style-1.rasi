@@ -53,7 +53,7 @@ mainbox {
 
 /*****----- Inputbar -----*****/
 inputbar {
-    enabled:                     true;
+    enabled:                     false;
     spacing:                     10px;
     margin:                      0px;
     padding:                     0px;
@@ -66,7 +66,7 @@ inputbar {
 }
 
 textbox-prompt-colon {
-    enabled:                     true;
+    enabled:                     false;
     expand:                      false;
     str:                         "";
     padding:                     10px 14px;
@@ -75,7 +75,7 @@ textbox-prompt-colon {
     text-color:                  @background;
 }
 prompt {
-    enabled:                     true;
+    enabled:                     false;
     padding:                     10px;
     border-radius:               0px;
     background-color:            @active;
@@ -84,7 +84,7 @@ prompt {
 
 /*****----- Message -----*****/
 message {
-    enabled:                     true;
+    enabled:                     false;
     margin:                      0px;
     padding:                     10px;
     border:                      0px solid;

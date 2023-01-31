@@ -8,7 +8,8 @@
       n = "clear && neofetch";
       v = "nvim";
       p = "python3";
-      cleanup = "nix-collect-garbage && nix-collect-garbage -d && sudo nix-collect-garbage && nix-collect-garbage -d && sudo nixos-rebuild switch --flake $HOME/.config/nixos/.#nixos";
+      cleanup = "nix-collect-garbage && nix-collect-garbage -d && sudo nix-collect-garbage && nix-collect-garbage -d";
+      record = "wf-recorder -f $HOME/Videos/$(date +'%Y%m%d%H%M%S_1.mp4')";
     };
   };
 }

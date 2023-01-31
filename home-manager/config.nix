@@ -19,8 +19,8 @@
   gtk = {
     enable = true;
     font.name = "Operator Mono";
+    iconTheme.name = "Papirus-Dark";
+    iconTheme.package = pkgs.papirus-icon-theme;
     theme.name = "Djancoeg";
-    iconTheme.name = "Colloid-dark";
-    cursorTheme.name = "Whitesur Cursors";
   };
 }
