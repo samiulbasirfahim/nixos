@@ -2,13 +2,12 @@
     pkgs,
     xdg-hyprland,
     ...
-}: {
+} : {
     home.packages = with pkgs; [
     grim
     slurp
     libnotify
     lxappearance
-    neovim
     swaybg
     kitty
     rofi
@@ -17,9 +16,6 @@
     rnix-lsp
     pamixer
     xfce.thunar
-    gcc
-    python39
-    nodejs
     ffmpeg
     obs-studio
     xdg-hyprland.packages.${pkgs.system}.hyprland-share-picker
@@ -28,9 +24,6 @@
     pavucontrol
     wget
     firefox
-    jupyter
-    nix-prefetch-github
-    vscode
     wlr-randr
     wf-recorder
     glib
