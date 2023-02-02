@@ -27,5 +27,6 @@
     wlr-randr
     wf-recorder
     glib
+    vlc
     ];
 }
