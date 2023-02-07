@@ -1,23 +1,25 @@
-{modulesPath,...}:{
+{ config, lib, pkgs, modulesPath, ... }:
+
+{
   imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/1ca8adc0-3025-447a-90e3-b48143281919";
+    { device = "/dev/disk/by-uuid/c3a588bc-3ba6-47b9-8c8c-c9cc51d318b0";
       fsType = "ext4";
     };
 
   fileSystems."/boot/efi" =
-    { device = "/dev/disk/by-uuid/1F98-B486";
+    { device = "/dev/disk/by-uuid/941E-F6BA";
       fsType = "vfat";
     };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/ddac6294-6c47-43f2-ba75-de22478cace7";
+    { device = "/dev/disk/by-uuid/f5232adb-755f-451f-a157-e2eb0734f6fc";
       fsType = "ext4";
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/1837309a-7a23-4099-9f13-5d32772cbe04"; }
+    [ { device = "/dev/disk/by-uuid/d1ea16a6-2785-473c-876e-bed970474b05"; }
     ];
 }

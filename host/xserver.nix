@@ -9,7 +9,13 @@
         displayManager = {
             defaultSession = "hyprland";
             sessionPackages = [ inputs.hyprland.packages.${pkgs.system}.default ];
-            lightdm.enable = true;
+            autoLogin = {
+                enable = true;
+                user = "fahim";
+            };
+            lightdm = {
+                enable = true;
+            };
         };
     };
 }

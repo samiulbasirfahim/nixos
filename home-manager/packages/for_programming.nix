@@ -10,6 +10,5 @@
     nix-prefetch-github
     vscode
     neovim
-    neovide
     ];
 }
