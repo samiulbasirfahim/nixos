@@ -4,6 +4,7 @@
         ./packages
         ../dotfiles
         ./shell
+        ./neofetch
         ./git.nix
     ];
 }
