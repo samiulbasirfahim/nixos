@@ -65,7 +65,8 @@ tooltip {
 #backlight {
     background: #1e1e2e;
     padding: 0px 12px;
-    margin: 8px 0px;
+    margin-top: 8px;
+    margin-bottom: 3px;
     border: 1.5px solid #f38ba8;
 }
 
