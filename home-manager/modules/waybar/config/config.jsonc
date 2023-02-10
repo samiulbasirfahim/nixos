@@ -1,0 +1,100 @@
+{
+  "layer": "top",
+  "position": "top",
+  "mod": "dock",
+  "exclusive": true,
+  "passtrough": false,
+  "gtk-layer-shell": true,
+  "height": 0,
+  "modules-left": ["wlr/workspaces", "hyprland/window"],
+  "modules-center": [],
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "pulseaudio#microphone",
+    "custom/language",
+    "cpu",
+    "memory",
+    "disk",
+    "network",
+    "clock"
+  ],
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 25
+  },
+  "wlr/workspaces": {
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "all-outputs": true,
+    "format": "{name}"
+  },
+  "cpu": {
+    "interval": 10,
+    "format": " {usage}%",
+    "max-length": 10
+  },
+  "memory": {
+    "interval": 30,
+    "format": " {percentage}%",
+    "max-length": 10
+  },
+  "custom/language": {
+    "exec": "cat /tmp/kb_layout",
+    "interval": 3,
+    "format": " {}",
+    "tooltip": false
+  },
+  "tray": {
+    "icon-size": 13,
+    "tooltip": false,
+    "spacing": 10
+  },
+
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format": "↕{bandwidthUpBytes} | ↕{bandwidthDownBytes}",
+    "format-disconnected": "{icon} No Internet",
+    "format-linked": " {ifname} (No IP)",
+    "tooltip-format": "{ifname}: {ipaddr}/{cidr}  {gwaddr}",
+    "tooltip-format-wifi": "{icon} {essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "{icon} {ipaddr}/{cidr}",
+    "tooltip-format-disconnected": "{icon} Disconnected",
+    "on-click-right": "nm-connection-editor",
+    "format-icons": {
+      "ethernet": "",
+      "disconnected": "⚠",
+      "wifi": ["睊", "直"]
+    },
+    "interval": 2
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "tooltip": false,
+    "format-muted": " Muted",
+    "on-click": "pamixer -t",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5",
+    "scroll-step": 5,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    }
+  },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "tooltip": false,
+    "format-source": " {volume}%",
+    "format-source-muted": " Muted",
+    "on-click": "pamixer --default-source -t",
+    "on-scroll-up": "pamixer --default-source -i 5",
+    "on-scroll-down": "pamixer --default-source -d 5",
+    "scroll-step": 5
+  }
+}

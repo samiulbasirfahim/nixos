@@ -22,4 +22,10 @@
   sound.enable = true;
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "22.11";
+  environment.systemPackages = with pkgs; [
+    wineWowPackages.stable
+    wineWowPackages.staging
+    winetricks
+    wineWowPackages.waylandFull
+  ];
 }
