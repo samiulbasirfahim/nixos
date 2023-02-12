@@ -64,8 +64,9 @@ tooltip {
 #disk,
 #backlight {
     background: #1e1e2e;
-    padding: 0px 12px;
-    margin-top: 8px;
+    border-radius: 10px;
+    padding: 0px 8px;
+    margin-top: 5px;
     margin-bottom: 3px;
     border: 1.5px solid #f38ba8;
 }
@@ -77,7 +78,6 @@ tooltip {
 
 #workspaces {
     background: #1e1e2e;
-    /* border-radius: 10px; */
     margin-left: 10px;
     padding-right: 0px;
     padding-left: 5px;
@@ -85,52 +85,58 @@ tooltip {
 
 #custom-language {
     color: #74c7ec;
-    border-left: 0px;
-    border-right: 0px;
 }
 
 
 #window {
-    /* border-radius: 10px; */
     margin-left: 10px;
 }
 
 #clock {
     color: #cba6f7;
-    /* border-radius: 0 10px 10px 0; */
+    margin-right: 10px;
+}
+
+/* network block */
+#network {
+    color: #89b4fa;
+    padding: 0 10px;
+    margin-right: 10px;
+}
+
+/* resources block */
+#cpu {
+    color: #89dceb;
+    border-radius: 10px 0 0 10px;
+    border-right: 0;
+}
+#memory {
+    /* color: #94e2d5; */
+    color: #89dceb;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+}
+#disk {
+    /* color: #a6e3a1; */
+    color: #89dceb;
+    border-radius: 0 10px 10px 0;
     margin-right: 10px;
     border-left: 0;
 }
 
-#network {
-    color: #fab387;
-    border-left: 0px;
-    border-right: 0px;
-}
-#cpu {
-    color: #89dceb;
-    border-left: 0px;
-    border-right: 0px;
-}
-#memory {
-    color: #94e2d5;
-    border-left: 0px;
-    border-right: 0px;
-}
-#disk {
-    color: #a6e3a1;
-    border-left: 0px;
-    border-right: 0px;
-}
 
+/* volume block */
 #pulseaudio {
-    color: #89b4fa;
-    border-right: 0px;
-    /* border-radius: 10px 0px 0px 10px; */
+    color: #b4befe;
+    border-radius: 10px 0px 0px 10px;
+    padding-left: 10px;
+    border-right: 0;
 }
-
 #pulseaudio.microphone {
     color: #b4befe;
-    /* border-radius: 0; */
+    border-radius: 0 10px 10px 0;
+    margin-right: 10px;
+    padding-right: 10px;
     border-left: 0;
 }

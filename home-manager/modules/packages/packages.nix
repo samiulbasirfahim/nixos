@@ -26,12 +26,13 @@
     unzip
     discord
     gparted
-    mpd
     ncmpcpp
+    mpd
     wofi
     wlogout
     tty-clock
     playerctl
     qalculate-gtk
+    swaylock-effects
     ];
 }

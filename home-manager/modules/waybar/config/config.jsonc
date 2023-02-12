@@ -6,13 +6,12 @@
   "passtrough": false,
   "gtk-layer-shell": true,
   "height": 0,
-  "modules-left": ["wlr/workspaces", "hyprland/window"],
+  "modules-left": ["wlr/workspaces","hyprland/window"],
   "modules-center": [],
   "modules-right": [
     "tray",
     "pulseaudio",
     "pulseaudio#microphone",
-    "custom/language",
     "cpu",
     "memory",
     "disk",
@@ -50,10 +49,18 @@
     "tooltip": false,
     "spacing": 10
   },
-
-  "network": {
+  "disk": {
+    "path": "/home",
+    "format": " {percentage_used}%"
+  },
+  "clock": {
+     "format": "{: %I:%M %p}",
+     "format-alt": "{: %a,%Y-%m-%d}",
+     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+ "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format": "↕{bandwidthUpBytes} | ↕{bandwidthDownBytes}",
+    "format": " {bandwidthUpBytes}   {bandwidthDownBytes}",
     "format-disconnected": "{icon} No Internet",
     "format-linked": " {ifname} (No IP)",
     "tooltip-format": "{ifname}: {ipaddr}/{cidr}  {gwaddr}",

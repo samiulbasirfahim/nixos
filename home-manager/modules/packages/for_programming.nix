@@ -10,5 +10,7 @@
     nix-prefetch-github
     vscode
     neovim
+    typescript
+    rnix-lsp
     ];
 }
