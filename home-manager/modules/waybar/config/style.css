@@ -66,8 +66,7 @@ tooltip {
     background: #1e1e2e;
     border-radius: 10px;
     padding: 0px 8px;
-    margin-top: 5px;
-    margin-bottom: 3px;
+    margin-top: 3px;
     border: 1.5px solid #f38ba8;
 }
 
@@ -101,6 +100,8 @@ tooltip {
 #network {
     color: #89b4fa;
     padding: 0 10px;
+    padding-right: 10px;
+    padding-left: 10px;
     margin-right: 10px;
 }
 
@@ -109,6 +110,7 @@ tooltip {
     color: #89dceb;
     border-radius: 10px 0 0 10px;
     border-right: 0;
+    padding-left: 10px;
 }
 #memory {
     /* color: #94e2d5; */
@@ -122,6 +124,7 @@ tooltip {
     color: #89dceb;
     border-radius: 0 10px 10px 0;
     margin-right: 10px;
+    padding-right: 10px;
     border-left: 0;
 }
 
@@ -139,4 +142,5 @@ tooltip {
     margin-right: 10px;
     padding-right: 10px;
     border-left: 0;
+    border-right:  1.5px solid #f38ba8;
 }

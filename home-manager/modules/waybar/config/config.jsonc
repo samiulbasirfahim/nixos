@@ -5,7 +5,6 @@
   "exclusive": true,
   "passtrough": false,
   "gtk-layer-shell": true,
-  "height": 0,
   "modules-left": ["wlr/workspaces","hyprland/window"],
   "modules-center": [],
   "modules-right": [
@@ -20,7 +19,7 @@
   ],
   "hyprland/window": {
     "format": "{}",
-    "max-length": 25
+    "max-length": 40
   },
   "wlr/workspaces": {
     "on-scroll-up": "hyprctl dispatch workspace e+1",

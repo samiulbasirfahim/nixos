@@ -17,6 +17,9 @@ M.setup_lsp = function(attach, capabilities)
 
     -- temporarily disable tsserver suggestions
     require("lspconfig").tsserver.setup {
+        on_attach = on_attach,
+        filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+        cmd = { "typescript-language-server", "--stdio" }
         init_options = {
             preferences = {
                 disableSuggestions = true,
