@@ -36,7 +36,7 @@
             kernelModules = [ "amdgpu" ];
             availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod" ];
         };
-        
+
         loader = {
             timeout = 0;
             systemd-boot = {

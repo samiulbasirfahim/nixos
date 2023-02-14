@@ -57,21 +57,10 @@
      "format-alt": "{: %a,%Y-%m-%d}",
      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
- "network": {
-    // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format": " {bandwidthUpBytes}   {bandwidthDownBytes}",
-    "format-disconnected": "{icon} No Internet",
-    "format-linked": " {ifname} (No IP)",
-    "tooltip-format": "{ifname}: {ipaddr}/{cidr}  {gwaddr}",
-    "tooltip-format-wifi": "{icon} {essid} ({signalStrength}%)",
-    "tooltip-format-ethernet": "{icon} {ipaddr}/{cidr}",
-    "tooltip-format-disconnected": "{icon} Disconnected",
-    "on-click-right": "nm-connection-editor",
-    "format-icons": {
-      "ethernet": "",
-      "disconnected": "⚠",
-      "wifi": ["睊", "直"]
-    },
+ "network":{
+    "format": " Connected",
+    "format-disconnected": "⚠ Disconnected",
+    "format-alt": " {bandwidthUpBytes}   {bandwidthDownBytes}",
     "interval": 2
   },
 

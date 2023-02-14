@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+dunst &
+waybar &
+swaybg -i $HOME/.config/hypr/wallpaper.jpg
+
+# other
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
+notify-send -a aurora "hello $(whoami)" &

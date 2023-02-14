@@ -4,22 +4,22 @@
   imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/c3a588bc-3ba6-47b9-8c8c-c9cc51d318b0";
-      fsType = "ext4";
-    };
+    fileSystems."/" =
+      { device = "/dev/disk/by-uuid/bcca4d6f-b521-4bf0-ad69-a8688ac82b0d";
+        fsType = "ext4";
+      };
 
-  fileSystems."/boot/efi" =
-    { device = "/dev/disk/by-uuid/941E-F6BA";
-      fsType = "vfat";
-    };
+    fileSystems."/boot/efi" =
+      { device = "/dev/disk/by-uuid/DF12-7B9F";
+        fsType = "vfat";
+      };
 
-  fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/f5232adb-755f-451f-a157-e2eb0734f6fc";
-      fsType = "ext4";
-    };
+    fileSystems."/home" =
+      { device = "/dev/disk/by-uuid/76728cc4-3b64-4f39-8059-38ee90c37569";
+        fsType = "ext4";
+      };
 
-  swapDevices =
-    [ { device = "/dev/disk/by-uuid/d1ea16a6-2785-473c-876e-bed970474b05"; }
-    ];
+    swapDevices =
+      [ { device = "/dev/disk/by-uuid/67148810-bd43-4c77-98e5-cd5e058b7fb7"; }
+      ];
 }
