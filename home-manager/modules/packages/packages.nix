@@ -9,7 +9,6 @@
     libnotify
     swaybg
     kitty
-    rofi
     dunst
     rnix-lsp
     ranger

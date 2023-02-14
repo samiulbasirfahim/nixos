@@ -9,7 +9,7 @@
         ./fonts
         ./dunst
         ./kitty
-        ./rofi
         ./neovim
+        ./wofi
     ];
 }
