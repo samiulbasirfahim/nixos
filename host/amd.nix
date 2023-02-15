@@ -1,4 +1,9 @@
-{...}: {
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   boot = {
     kernelModules = [ "kvm-amd" ];
     initrd.kernelModules = [ "amdgpu" ];

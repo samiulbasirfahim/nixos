@@ -8,5 +8,9 @@
         gnome = {
             gnome-keyring.enable = true;
         };
+        dbus.enable = true;
+        dbus.packages = [
+            pkgs.gnome.seahorse
+        ];
     };
 }
