@@ -7,7 +7,7 @@
       ./hardware.nix
       ./users.nix
       ./network.nix
-      ./xserver.nix
+      ./amd.nix
       ./settings.nix
       ./disks.nix
       ./services.nix

@@ -5,7 +5,7 @@
     boot = {
         cleanTmpDir = true;
         kernelPackages = pkgs.linuxPackages_zen;
-        kernelModules = [ "kvm-amd" ];
+        
         plymouth = {
             enable = true;
             theme = "glitch";
@@ -33,7 +33,6 @@
           ];
         };
         initrd = {
-            kernelModules = [ "amdgpu" ];
             availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod" ];
         };
 
