@@ -44,9 +44,7 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 0 5px;
     color: #a6adc8;
-    margin-right: 5px;
 }
 
 #workspaces button.active {

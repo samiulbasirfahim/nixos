@@ -4,6 +4,7 @@
       BROWSER = "firefox";
       TERMINAL = "kitty";
       QT_QPA_PLATFORMTHEME = "gtk3";
+      GTK_USE_PORTAL=1;
       QT_SCALE_FACTOR = "1";
       MOZ_ENABLE_WAYLAND = "1";
       MOZ_WEBRENDER = "1";
