@@ -13,7 +13,7 @@
 <br/>
 <img src="./media/20230217014328_1.png" width="70%"/>
 
-./media/20230216223924_1.mp4
+[![Watch the video](./media/20230216223924_1.mp4)]
 
 
 </div>
