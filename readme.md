@@ -1,8 +1,11 @@
 <div align="center">
+<br/>
+<br/>
 
 # 🌸**Nixos x Hyprland**🌸
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/samiulbasirfahim/nixos?style=for-the-badge&color=E08BCA) ![GitHub last commit](https://img.shields.io/github/last-commit/samiulbasirfahim/nixos?style=for-the-badge&color=E08BCA) ![GitHub repo size](https://img.shields.io/github/repo-size/samiulbasirfahim/nixos?style=for-the-badge&color=E08BCA)
+<br/>
 <br/>
 
 # Gallery
@@ -17,7 +20,14 @@
 
 </div>
 
-# Details
+<div align="center">
+</br>
+</br>
+
+# **Details**
+
+</div>
+
 - **OS**: [Nixos](https://nixos.org/)
 - **Window Manager**: [Hyprland](https://github.com/hyprwm/Hyprland)
 - **Terminal Emulator**: [kitty](https://github.com/kovidgoyal/kitty)
@@ -31,7 +41,12 @@
 - **Font**: `Operator Mono, Font-awesome, MesloGs Nf`
 - **Wallpaper**: `./modules/hyprland/config/wallpaper.jpg`
 
+
+
 <div align="center">
+
+</br>
+</br>
 
 # **Installation**
 
@@ -59,7 +74,9 @@ sudo nixos-rebuild switch --flake ~/.config/nixos/.#nixos
 
 </div>
 
-- Now you can just rebuild command in your terminal to rebuild your system.
-- sudo will replace with doas.
+- Now you can just rebuild command in your terminal to `rebuild` your system.
+- `sudo` will replace with `doas`.
+- Keymappings are in `~/.config/hypr/modules/keybind.conf` file. You can know about them from the conf file.
+
 
 
