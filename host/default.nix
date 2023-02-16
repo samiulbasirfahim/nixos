@@ -12,6 +12,7 @@
       ./disks.nix
       ./services.nix
       ./programs.nix
+      ./fonts.nix
     ];
 
 
