@@ -33,5 +33,6 @@
     playerctl
     qalculate-gtk
     swaylock-effects
+    bleachbit
     ];
 }
