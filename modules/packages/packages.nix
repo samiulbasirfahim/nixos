@@ -34,5 +34,6 @@
     qalculate-gtk
     swaylock-effects
     bleachbit
+    imv
     ];
 }

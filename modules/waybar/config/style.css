@@ -9,7 +9,7 @@
 }
 
 window#waybar {
-    background: #1e1e2e;
+    background: rgba(30, 30, 46, 1);
     color: #f5e0dc;
 }
 
@@ -27,7 +27,7 @@ window#waybar {
 #memory,
 #disk {
     background: #1e1e2e;
-    padding: 0px 8px;
+    padding: 3px 8px;
     margin: 3px;
     box-shadow: inset 0px 0px 4px 11px rgba(194, 226, 214, 0.195);
     background: linear-gradient(1108deg, rgb(230, 154, 198) 5%, rgb(201, 236, 251) 5%, rgb(201, 236, 251) 20%, rgb(230, 154, 198) 20%, rgb(230, 154, 198) 40%, rgb(201, 236, 251) 40%, rgb(201, 236, 251) 60%, rgb(230, 154, 198) 60%, rgb(230, 154, 198) 80%, rgb(201, 236, 251) 80%, rgb(201, 236, 251) 95%, rgb(230, 154, 198) 95%); 
@@ -44,7 +44,7 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 5px;
+    padding: 0 5px;
     color: #a6adc8;
     margin-right: 5px;
 }
