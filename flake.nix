@@ -24,25 +24,9 @@
     {
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit self inputs; };
+          specialArgs = { inherit self inputs hyprland home-manager; };
           modules = [
-            hyprland.nixosModules.default
             ./host
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                  useUserPackages = true;
-                  useGlobalPkgs = true;
-                  extraSpecialArgs = { inherit inputs; };
-                  # Home manager config (configures programs like firefox, zsh, eww, etc)
-                  users.fahim = (./. + "/home-manager");
-              };
-              # nixpkgs.overlays = [
-              #     # Add nur overlay for Firefox addons
-              #     nur.overlay
-              #     (import ./overlays)
-              # ];
-            }
           ];
         };
       };
