@@ -35,5 +35,6 @@
     swaylock-effects
     bleachbit
     imv
+    google-chrome
     ];
 }

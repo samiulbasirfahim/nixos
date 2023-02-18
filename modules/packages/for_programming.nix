@@ -8,7 +8,6 @@
     yarn
     gcc
     nix-prefetch-github
-    atom
     vscode
     neovim
     typescript
