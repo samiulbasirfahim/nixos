@@ -25,9 +25,11 @@ window#waybar {
 #tray,
 #cpu,
 #memory,
+#temperature,
+#taskbar,
 #disk {
     background: #1e1e2e;
-    padding: 3px 8px;
+    padding: 2px 8px;
     margin: 3px;
     box-shadow: inset 0px 0px 4px 11px rgba(194, 226, 214, 0.195);
     background: linear-gradient(1108deg, rgb(230, 154, 198) 5%, rgb(201, 236, 251) 5%, rgb(201, 236, 251) 20%, rgb(230, 154, 198) 20%, rgb(230, 154, 198) 40%, rgb(201, 236, 251) 40%, rgb(201, 236, 251) 60%, rgb(230, 154, 198) 60%, rgb(230, 154, 198) 80%, rgb(201, 236, 251) 80%, rgb(201, 236, 251) 95%, rgb(230, 154, 198) 95%); 
@@ -36,7 +38,7 @@ window#waybar {
     color: #181825;
     margin: 4px 0px;
     margin-right: 10px;
-    border-radius: 4px;
+    border-radius: 2px;
 }
 
 #workspaces {
@@ -49,4 +51,8 @@ window#waybar {
 
 #workspaces button.active {
     color: #313244;
+}
+
+#temperature.critical {
+    background: red;
 }

@@ -2,7 +2,7 @@
     imports = [
         ./packages
         ./shell
-        ./neofetch
+        # ./neofetch
         ./hyprland
         ./waybar
         ./themes

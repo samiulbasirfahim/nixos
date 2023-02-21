@@ -4,6 +4,7 @@
 } : {
     home.packages = with pkgs; [
     nodejs
+    nodePackages.nodemon
     python39
     yarn
     gcc
