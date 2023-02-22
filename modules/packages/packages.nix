@@ -36,10 +36,9 @@
     bleachbit
     imv
     libsForQt5.dolphin
-    nitch
     cmatrix
     google-chrome
     shotcut
-    lightworks
+    cava
     ];
 }

@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    hyprpicker.url = "github:hyprwm/hyprpicker";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -9,26 +10,19 @@
       url = "github:hyprwm/hyprland/v0.20.1beta";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    xdg-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
   };
 
-  outputs = {self, nixpkgs, hyprland, home-manager, xdg-hyprland, ... }@inputs:
+  outputs = {self, nixpkgs, ... }@inputs:
     let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config = { allowUnfree = true; };
-      };
-      lib = nixpkgs.lib;
+      username = "fahim";
+      hostname = "nixos";
+      
     in
     {
-      nixosConfigurations = {
-        nixos = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit self inputs hyprland home-manager; };
-          modules = [
-            ./host
-          ];
-        };
-      };
+      nixosConfigurations = (
+        import ./hosts {
+          inherit self inputs nixpkgs username hostname;
+        }
+      );
     };
 }

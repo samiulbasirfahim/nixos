@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+dunst &
+waybar &
+swaybg -i $HOME/.config/hypr/wallpaper.jpg &
+wl-paste --type text --watch cliphist store &
+wl-paste --type image --watch cliphist store &
+
+#discord --start-minimized &
+
+# other
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
+notify-send -a aurora "hello $(whoami)" &
