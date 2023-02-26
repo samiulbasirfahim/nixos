@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 dunst &
 waybar &
-swaybg -i $HOME/.config/hypr/wallpaper.jpg &
+# swaybg -i $HOME/.config/hypr/wallpaper.jpg &
+swww init &
+swww img .local/share/wallpapers/4.gif &
 wl-paste --type text --watch cliphist store &
 wl-paste --type image --watch cliphist store &
 
@@ -10,3 +12,5 @@ wl-paste --type image --watch cliphist store &
 # other
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
 notify-send -a aurora "hello $(whoami)" &
+
+#cd /home/fahim/Documents/starpage/ && python -m http.server && cd &

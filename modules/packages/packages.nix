@@ -1,13 +1,13 @@
-{
-    pkgs,
-    xdg-hyprland,
-    ...
-} : {
-    home.packages = with pkgs; [
+{ pkgs
+,inputs
+, xdg-hyprland
+, ...
+}: {
+  home.packages = with pkgs; [
     grim
     slurp
     libnotify
-    swaybg
+    swww
     kitty
     dunst
     rnix-lsp
@@ -40,5 +40,9 @@
     google-chrome
     shotcut
     cava
-    ];
+    inputs.hyprpicker.packages.${pkgs.system}.hyprpicker
+    git
+    swww
+    git
+  ];
 }

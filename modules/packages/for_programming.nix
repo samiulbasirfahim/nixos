@@ -5,7 +5,6 @@
     home.packages = with pkgs; [
     nodejs
     nodePackages.nodemon
-    python39
     yarn
     gcc
     nix-prefetch-github
@@ -13,5 +12,6 @@
     neovim
     typescript
     rnix-lsp
+    # rust
     ];
 }

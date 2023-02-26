@@ -9,7 +9,7 @@
 }
 
 window#waybar {
-    background: rgba(30, 30, 46, 0.75);
+    background: transparent;
     color: #f5e0dc;
 }
 
@@ -33,12 +33,14 @@ window#waybar {
     margin: 3px;
     box-shadow: inset 0px 0px 4px 11px rgba(194, 226, 214, 0.195);
     background: linear-gradient(1108deg, rgb(230, 154, 198) 5%, rgb(201, 236, 251) 5%, rgb(201, 236, 251) 20%, rgb(230, 154, 198) 20%, rgb(230, 154, 198) 40%, rgb(201, 236, 251) 40%, rgb(201, 236, 251) 60%, rgb(230, 154, 198) 60%, rgb(230, 154, 198) 80%, rgb(201, 236, 251) 80%, rgb(201, 236, 251) 95%, rgb(230, 154, 198) 95%); 
+    /* background: linear-gradient(1108deg, #17A7C6 5%, #006F99 5%, #006F99 20%, #17A7C6 20%, #17A7C6 40%, #006F99 40%, #006F99 60%, #17A7C6 60%, #17A7C6 80%, #006F99 80%, #006F99 95%, #17A7C6 95%);  */
     background-size: 200% 300%;
     animation-duration: 750ms;
     color: #181825;
+    border: 1px solid #17A7C6;
     margin: 4px 0px;
     margin-right: 10px;
-    border-radius: 2px;
+    border-radius: 8px;
 }
 
 #workspaces {

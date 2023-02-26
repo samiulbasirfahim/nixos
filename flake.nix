@@ -16,9 +16,10 @@
     let
       username = "fahim";
       hostname = "nixos";
-      
+      selfPkgs = import ./pkgs;
     in
     {
+      overlays.default = selfPkgs.overlay;
       nixosConfigurations = (
         import ./hosts {
           inherit self inputs nixpkgs username hostname;
