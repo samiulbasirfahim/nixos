@@ -6,7 +6,7 @@
     [ (import ./bootloader.nix) ] ++
     [ (import ./fileSystem.nix) ] ++
     [ (import ./xserver.nix) ] ++
-    [ (import ./../../modules/packages/python.nix ) ] ++
+    [ (import ./../../modules/packages/python.nix) ] ++
     [ (import ./hardware.nix) ];
 
   # basic configuration
@@ -32,7 +32,7 @@
   security.sudo.enable = false;
   security.doas.enable = true;
   security.doas.extraRules = [{
-    users = ["fahim"];
+    users = [ "fahim" ];
     keepEnv = true;
     persist = true;
   }];
@@ -48,9 +48,9 @@
 
 
   # nix setting
-  nix.settings.allowed-users = ["fahim"];
+  nix.settings.allowed-users = [ "fahim" ];
   nix.settings.auto-optimise-store = true;
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.gc.automatic = true;
   nix.gc.dates = "weekly";
   nix.gc.options = "--delete-older-than 7d";
@@ -63,5 +63,15 @@
   security.pam.services.swaylock = { };
   environment.systemPackages = with pkgs; [
     git
+    twemoji-color-font
   ];
+  fonts = {
+    fonts = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk
+      noto-fonts-emoji
+      # nerdfonts
+      twemoji-color-font
+    ];
+  };
 }

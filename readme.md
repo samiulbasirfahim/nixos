@@ -83,50 +83,6 @@ sudo nixos-rebuild switch --flake ~/.config/nixos/.#nixos
 
 <div align="center">
 </br>
-<span style="color:red;font-size:20px;">Non-nixos guide</span>
-</br>
-</div>
-
-### First of all create a backup of your old config. Then follow the instruction below.
-
-- Hyprland
-```
-cp -r ./modules/hyprland/config ~/.config/hypr
-```
-- Waybar
-```
-cp -r ./modules/waybar/config ~/.config/waybar
-```
-- Wofi 
-```
-cp -r ./modules/wofi/config ~/.config/wofi
-```
-- Kitty
-```
-cp -r ./modules/kitty/config ~/.config/kitty
-```
-- Neovim
-```
-cp -r ./modules/neovim/config ~/.config/nvim
-```
-- Fonts  
-```
-cp -r ./modules/fonts/fonts ~/.local/share/fonts
-```
-- Themes
-```
-cp -r ./modules/themes/themes ~/.local/share/themes
-```
-- Dunst 
-```
-cp -r ./modules/dunst/config ~/.config/dunst
-```
-
-
-
-
-<div align="center">
-</br>
 
 # **After installation guide**
 <span style="color:red;font-size:20px;">Only for nixos</span>

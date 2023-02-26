@@ -19,7 +19,7 @@ let
           --fade-in 0.3
   '';
   wall-change = pkgs.writeShellScriptBin "wall-change" ''
-    swww img $1 --transition-type grow --transition-pos "$(hyprctl cursorpos)" --transition-duration 3
+    swww img $1 --transition-type random --transition-pos "$(hyprctl cursorpos)" --transition-duration 3
   '';
 in
 {
