@@ -3,15 +3,14 @@
 {
   imports =
     [ (import ./plymouth.nix) ] ++
+    [ (import ./hardware-configuration.nix) ] ++
     [ (import ./bootloader.nix) ] ++
-    [ (import ./fileSystem.nix) ] ++
     [ (import ./xserver.nix) ] ++
     [ (import ./../../modules/packages/python.nix) ] ++
     [ (import ./hardware.nix) ];
 
   # basic configuration
   time.timeZone = "Asia/Dhaka";
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   i18n.defaultLocale = "en_US.UTF-8";
   sound.enable = true;
   nixpkgs.config.allowUnfree = true;
@@ -21,11 +20,17 @@
   # networking
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
-  networking.useDHCP = lib.mkDefault true;
 
 
   # programs
   programs.dconf.enable = true;
+  programs.nm-applet.enable = true;
+  programs.seahorse.enable = true;
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+    pinentryFlavor = "gtk2";
+  };
 
 
   # security
@@ -64,13 +69,14 @@
   environment.systemPackages = with pkgs; [
     git
     twemoji-color-font
+    networkmanagerapplet
   ];
   fonts = {
     fonts = with pkgs; [
       noto-fonts
       noto-fonts-cjk
       noto-fonts-emoji
-      # nerdfonts
+      nerdfonts
       twemoji-color-font
     ];
   };

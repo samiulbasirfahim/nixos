@@ -44,5 +44,6 @@
     git
     swww
     git
+    htop
   ];
 }

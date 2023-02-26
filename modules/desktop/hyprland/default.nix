@@ -26,7 +26,7 @@
     general {
       gaps_in = 3
       gaps_out = 5
-      border_size = 3
+      border_size = 2
       col.active_border = rgb(ffc0cb)
       col.inactive_border = rgba(595959aa)
       layout = dwindle # master|dwindle
@@ -51,16 +51,16 @@
       inactive_opacity = 1.0
       fullscreen_opacity = 1.0
       rounding = 0
-      blur = 1
+      blur = 0
       blur_size = 1
       blur_passes = 1
       blur_new_optimizations = true
     }
     animations {
       enabled=1
-      bezier = overshot, 0.13, 0.99, 0.29, 1.1
+      bezier = overshot, 0.13, 0.99, 0.29, 1
       animation = windows, 1, 4, overshot, slide
-      animation = windowsOut, 1, 5, default, popin 10%
+      animation = windowsOut, 1, 5, default, popin 50%
       animation = border, 1, 5, default
       animation = fade, 1, 8, default
       animation = workspaces, 1, 6, overshot, slidevert
@@ -75,10 +75,12 @@
     bind = $mainMod, F, fullscreen,
     bind = $mainMod, Space, togglefloating,
     bind = $mainMod, Z, exec, pkill wofi || wofi --show drun
+    bind = $mainMod, X, exec, pkill wlogout || wlogout
     bind = $mainMod, C, exec, hyprctl dispatch centerwindow none
     bind = $mainMod, P, pseudo,
     bind = $mainMod, Y, pin,
     bind = $mainMod, J, togglesplit,
+    bind = $mainMod, E, exec, thunar
     bind = $mainMod, B, exec, killall -SIGUSR1 .waybar-wrapped
     bind = $mainMod SHIFT, c ,exec, hyprpicker -a
     bind = $mainMod SHIFT, Return, exec, kitty fish --start-as=fullscreen
@@ -171,9 +173,15 @@
     windowrule=float,mpv
     windowrule=move 25%-,mpv
     windowrule=size 960 540,mpv
-    windowrule=float,nemo
-    windowrule=move 25%-,nemo
-    windowrule=size 960 540,nemo
+    windowrule=float,thunar
+    windowrule=move 25%-,thunar
+    windowrule=size 960 540,thunar
+    windowrule=float,pavucontrol
+    windowrule=move 25%-,pavucontrol
+    windowrule=size 960 540,pavucontrol
+    windowrule=float,bleachbit
+    windowrule=move 25%-,bleachbit
+    windowrule=size 960 540,bleachbit
     windowrule=animation popin,kitty
     windowrule=float,ncmpcpp
     windowrule=move 25%-,ncmpcpp
@@ -185,10 +193,11 @@
     exec-once = waybar &
     exec-once = swww init &
     exec-once = dunst &
-    exec-once = sleep 2 && swww img .local/share/wallpapers/4.gif &
+    exec-once = swww img .local/share/wallpapers/4.gif &
     exec-once = wl-paste --type text --watch cliphist store &
     exec-once = wl-paste --type image --watch cliphist store &
+    exec-once = sleep 1 && my-swaylock &
+    exec-once = nm-applet --indicator &
     '';
-
   };
 }

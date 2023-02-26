@@ -18,7 +18,7 @@
 
     sort = yes
     idle_threshold = 120
-    font = Operator Mono 10
+    font = JetBrainsMono Nerd Font 10
     line_height = 0
     markup = full
     alignment = left

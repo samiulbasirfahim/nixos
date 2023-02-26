@@ -9,7 +9,7 @@
     };
     style = ''
         * {
-          font-family: JetBrainsMono Nerd Font;
+          font-family: FiraCode Nerd Font;
           font-weight: normal;
           font-size: 13px;
           min-height: 0;
@@ -203,7 +203,7 @@
       };
       "tray" = {
         "icon-size" = 15;
-        "spacing" = 5;
+        "spacing" = 10;
       };
     }];
   };

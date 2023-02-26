@@ -2,7 +2,7 @@
   programs.fish = {
     enable = true;
     shellAliases = {
-      rebuild = "doas nixos-rebuild switch --flake $HOME/nixos/.#nixos";
+      rebuild = "doas nixos-rebuild switch --flake $HOME/NixOS/.#nixos";
       cleanup = "nix-collect-garbage && nix-collect-garbage -d && doas nix-collect-garbage && doas nix-collect-garbage -d && doas rm /nix/var/nix/gcroots/auto/*";
       n = "clear && neofetch";
       v = "nvim";
