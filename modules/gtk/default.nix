@@ -2,6 +2,9 @@
 
 {
   imports = [ ( import ./themes ) ];
+  home.file.".local/share/fonts/OperatorMono-Bold.otf".source = ./fonts/OperatorMono-Bold.otf;
+  home.file.".local/share/fonts/OperatorMono-Book.otf".source = ./fonts/OperatorMono-Book.otf;
+  home.file.".local/share/fonts/OperatorMonoLig-MediumItalic.otf".source = ./fonts/OperatorMonoLig-MediumItalic.otf;
   home.sessionVariables = {
     GTK_THEME = "Catpuccin";
   };
@@ -25,20 +28,20 @@
     };
 
     font = {
-      name = "JetBrainsMono Nerd Font";
+      name = "Operator Mono Book";
       size = 11;
     };
-    gtk3.extraConfig = {
-      gtk-xft-antialias = 1;
-      gtk-xft-hinting = 1;
-      gtk-xft-hintstyle = "hintslight";
-      gtk-xft-rgba = "rgb";
-    };
-    gtk2.extraConfig = ''
-      gtk-xft-antialias=1
-      gtk-xft-hinting=1
-      gtk-xft-hintstyle="hintslight"
-      gtk-xft-rgba="rgb"
-    '';
+    # gtk3.extraConfig = {
+    #   gtk-xft-antialias = 1;
+    #   gtk-xft-hinting = 1;
+    #   gtk-xft-hintstyle = "hintslight";
+    #   gtk-xft-rgba = "rgb";
+    # };
+    # gtk2.extraConfig = ''
+    #   gtk-xft-antialias=1
+    #   gtk-xft-hinting=1
+    #   gtk-xft-hintstyle="hintslight"
+    #   gtk-xft-rgba="rgb"
+    # '';
   };
 }

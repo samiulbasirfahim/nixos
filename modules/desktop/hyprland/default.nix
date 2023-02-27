@@ -81,7 +81,7 @@
     bind = $mainMod, Y, pin,
     bind = $mainMod, J, togglesplit,
     bind = $mainMod, E, exec, thunar
-    bind = $mainMod, B, exec, killall -SIGUSR1 .waybar-wrapped
+    bind = $mainMod, B, exec, pkill -SIGUSR1 .waybar-wrapped
     bind = $mainMod SHIFT, c ,exec, hyprpicker -a
     bind = $mainMod SHIFT, Return, exec, kitty fish --start-as=fullscreen
 
@@ -189,16 +189,13 @@
     windowrule=move 25%-,bleachbit
     windowrule=size 960 540,bleachbit
     windowrule=animation popin,kitty
-    windowrule=float,ncmpcpp
-    windowrule=move 25%-,ncmpcpp
-    windowrule=size 960 540,ncmpcpp
     windowrule=noblur,^(firefox)$
 
 
     # autostart
     exec-once = waybar &
     exec-once = swww init && swww img .local/share/wallpapers/4.gif && my-swaylock &
-    exec-once = dunst &
+    exec-once = mako &
     exec-once = wl-paste --type text --watch cliphist store &
     exec-once = wl-paste --type image --watch cliphist store &
     # exec-once = sleep 1 

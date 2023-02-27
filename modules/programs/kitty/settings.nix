@@ -1,6 +1,6 @@
 { ... }: {
   
-  font_family = "JetBrainsMono Nerd Font";
+  font_family = "Operator Mono Book";
   font_size = 13;
   disable_ligatures = "never";
   cursor_shape = "underline";

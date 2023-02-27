@@ -8,8 +8,6 @@
     slurp
     libnotify
     swww
-    kitty
-    dunst
     rnix-lsp
     ranger
     ueberzug
@@ -25,8 +23,7 @@
     unzip
     discord
     gparted
-    ncmpcpp
-    mpd
+    mpv
     wofi
     wlogout
     tty-clock
@@ -45,5 +42,7 @@
     swww
     git
     htop
+    btop
+    rofi-wayland
   ];
 }

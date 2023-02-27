@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       background_opacity = "0.95";
-      font_family = "JetbrainsMono nerd font";
+      font_family = "Operator Mono Book";
       font_size = 13;
       disable_ligatures = "never";
       cursor_shape = "underline";

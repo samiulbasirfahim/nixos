@@ -8,10 +8,10 @@
       target = "graphical-session.target";
     };
     style = ''
-        * {
-          font-family: FiraCode Nerd Font;
+      * {
+          font-family:Operator Mono Book, FiraCode Nerd Font;
           font-weight: normal;
-          font-size: 13px;
+          font-size: 14px;
           min-height: 0;
           transition-property: background-color;
           transition-duration: 0.5s;
@@ -28,10 +28,13 @@
       #workspaces {
         padding-left: 0px;
         padding-right: 4px;
+        border-radius: 0px;
+        margin-top: 4px;
+        margin-bottom: 4px;
       }
       #workspaces button {
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding-top: 2px;
+        padding-bottom: 2px;
         padding-left: 6px;
         padding-right: 6px;
       }
@@ -49,9 +52,9 @@
         color: rgb(217, 224, 238);
       }
       #custom-launcher {
-        font-size: 20px;
+        font-size: 18px;
         padding-left: 8px;
-        padding-right: 6px;
+        padding-right: 12px;
         color: #7ebae4;
       }
       #clock, 
@@ -65,7 +68,7 @@
       #pulseaudio, 
       #network, 
       #battery, 
-      #custom-powermenu, 
+      #disk, 
       #custom-cava-internal 
       {
         padding-left: 10px;
@@ -103,7 +106,7 @@
       #network.disconnected {
         color: rgb(255, 255, 255);
       }
-      #custom-powermenu {
+      #disk {
         color: rgb(242, 143, 173);
       }
       #tray {
@@ -127,14 +130,19 @@
         "pulseaudio#microphone"
         "memory"
         "cpu"
+        "disk"
         "network"
-        "custom/powermenu"
+        # "custom/powermenu"
         "tray"
       ];
       "custom/launcher" = {
         "format" = " ";
         "on-click" = "pkill wofi || wofi";
         "tooltip" = false;
+      };
+      "disk" = {
+        "path" = "/home";
+        "format" = "󱁋 {percentage_used}%";
       };
       "custom/wall" = {
         "on-click" = "wallpaper_random";
@@ -155,6 +163,8 @@
           "default" = [ "" "" "" ];
         };
         "on-click" = "pamixer -t";
+        "on-click-right" = "pavucontrol";
+        "on-click-middle" = "$HOME/.local/bin/toggle-sound-output";
         "tooltip" = false;
       };
       "pulseaudio#microphone" = {
@@ -165,28 +175,35 @@
         "on-scroll-up" = "pamixer --default-source -i 5";
         "on-scroll-down" = "pamixer --default-source -d 5";
         "scroll-step" = 5;
+        "on-click-right" = "pavucontrol";
       };
+      # "clock" = {
+      #   "interval" = 1;
+      #   "format" = "{:%I:%M %p  %A %b %d}";
+      #   "tooltip" = true;
+      #   "tooltip-format" = "<tt>{calendar}</tt>";
+      # };
       "clock" = {
-        "interval" = 1;
-        "format" = "{:%I:%M %p  %A %b %d}";
-        "tooltip" = true;
-        "tooltip-format" = "<tt>{calendar}</tt>";
+        "format" = "{:%I:%M %p}";
+        "format-alt" = "{:%I:%M %p  %A %b %d}";
+        "tooltip-format" = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       };
       "memory" = {
         "interval" = 1;
-        "format" = "﬙ {percentage}%";
+        "format" = " {percentage}%";
         "states" = {
           "warning" = 85;
         };
       };
       "cpu" = {
         "interval" = 1;
-        "format" = " {usage}%";
+        "format" = " {usage}%";
       };
       "network" = {
         "interval" = 1;
-        "format" = "說 Connected";
-        "format-alt" = "說 {ifname} ({ipaddr})";
+        "format" = "說 Connected({ifname})";
+        "format-alt" = "  {bandwidthUpBytes}    {bandwidthDownBytes}";
+        # "format-alt" = "說  ({ipaddr})";
         "format-disconnected" = "說 Disconnected";
         "tooltip" = false;
       };
