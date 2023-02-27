@@ -160,7 +160,7 @@
       "pulseaudio#microphone" = {
         "format" = "{format_source}";
         "format-source" = " {volume}%";
-        "format-source-muted" = " Muted";
+        "format-source-muted" = " Muted";
         "on-click" = "pamixer --default-source -t";
         "on-scroll-up" = "pamixer --default-source -i 5";
         "on-scroll-down" = "pamixer --default-source -d 5";

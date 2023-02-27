@@ -16,7 +16,7 @@ let
           --line-color 00000000 \
           --inside-color 00000088 \
           --separator-color 00000000 \
-          --fade-in 0.3
+          --fade-in 0.3 && notify-send "Hey Fahim, Welcome back"
   '';
   wall-change = pkgs.writeShellScriptBin "wall-change" ''
     swww img $1 --transition-type random --transition-pos "$(hyprctl cursorpos)" --transition-duration 3

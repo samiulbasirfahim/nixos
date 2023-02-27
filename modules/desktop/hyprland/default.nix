@@ -130,9 +130,6 @@
     bind = $mainMod CTRL, 8, movetoworkspace, 8
     bind = $mainMod CTRL, 9, movetoworkspace, 9
     bind = $mainMod CTRL, 0, movetoworkspace, 10
-    bind = $mainMod CTRL, left, movetoworkspace, -1
-    bind = $mainMod CTRL, right, movetoworkspace, +1
-
 
     # same as above, but doesnt switch to the workspace
     bind = $mainMod SHIFT, 1, movetoworkspacesilent, 1
@@ -145,8 +142,17 @@
     bind = $mainMod SHIFT, 8, movetoworkspacesilent, 8
     bind = $mainMod SHIFT, 9, movetoworkspacesilent, 9
     bind = $mainMod SHIFT, 0, movetoworkspacesilent, 10
-    bind = $mainMod SHIFT, left, movetoworkspacesilent, -1
-    bind = $mainMod SHIFT, right, movetoworkspacesilent, +1
+
+
+    bind=SUPER SHIFT, left, movewindow, l
+    bind=SUPER SHIFT, right, movewindow, r
+    bind=SUPER SHIFT, up, movewindow, u
+    bind=SUPER SHIFT, down, movewindow, d
+    
+    bind=SUPER CTRL, left, resizeactive, -20 0
+    bind=SUPER CTRL, right, resizeactive, 20 0
+    bind=SUPER CTRL, up, resizeactive, 0 -20
+    bind=SUPER CTRL, down, resizeactive, 0 20
 
     # ----------------------------------------------------------------
     # media and volume controls
@@ -191,12 +197,11 @@
 
     # autostart
     exec-once = waybar &
-    exec-once = swww init &
+    exec-once = swww init && swww img .local/share/wallpapers/4.gif && my-swaylock &
     exec-once = dunst &
-    exec-once = swww img .local/share/wallpapers/4.gif &
     exec-once = wl-paste --type text --watch cliphist store &
     exec-once = wl-paste --type image --watch cliphist store &
-    exec-once = sleep 1 && my-swaylock &
+    # exec-once = sleep 1 
     exec-once = nm-applet --indicator &
     '';
   };
