@@ -44,5 +44,7 @@
     htop
     btop
     rofi-wayland
+    zoom-us
+    xdg-utils
   ];
 }

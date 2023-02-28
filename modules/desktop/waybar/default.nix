@@ -219,7 +219,7 @@
         "tooltip" = false;
       };
       "tray" = {
-        "icon-size" = 15;
+        "icon-size" = 12;
         "spacing" = 10;
       };
     }];
