@@ -1,6 +1,5 @@
-{ pkgs
-, ...
-}: {
+{ pkgs, ... }:
+{
   programs.waybar = {
     enable = true;
     systemd = {
@@ -8,10 +7,10 @@
       target = "graphical-session.target";
     };
     style = ''
-      * {
-          font-family:Operator Mono Book, FiraCode Nerd Font;
+          * {
+          font-family: JetbraainsMono nerd font, FiraCode Nerd Font;
           font-weight: normal;
-          font-size: 14px;
+          font-size: 13px;
           min-height: 0;
           transition-property: background-color;
           transition-duration: 0.5s;
@@ -29,8 +28,8 @@
         padding-left: 0px;
         padding-right: 4px;
         border-radius: 0px;
-        margin-top: 4px;
-        margin-bottom: 4px;
+        padding-top: 2px;
+        padding-bottom: 2px;
       }
       #workspaces button {
         padding-top: 2px;
@@ -52,9 +51,9 @@
         color: rgb(217, 224, 238);
       }
       #custom-launcher {
-        font-size: 18px;
+        font-size: 16px;
         padding-left: 8px;
-        padding-right: 12px;
+        padding-right: 6px;
         color: #7ebae4;
       }
       #clock, 
@@ -71,8 +70,10 @@
       #disk, 
       #custom-cava-internal 
       {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 1px;
+        padding-bottom: 1px;
       }
       #mode {
         margin-left: 10px;
@@ -111,8 +112,9 @@
       }
       #tray {
         padding-right: 8px;
-        padding-left: 10px;
+        padding-left: 13px;
       }
+
     '';
     settings = [{
       "layer" = "top";
@@ -177,17 +179,17 @@
         "scroll-step" = 5;
         "on-click-right" = "pavucontrol";
       };
-      # "clock" = {
-      #   "interval" = 1;
-      #   "format" = "{:%I:%M %p  %A %b %d}";
-      #   "tooltip" = true;
-      #   "tooltip-format" = "<tt>{calendar}</tt>";
-      # };
       "clock" = {
-        "format" = "{:%I:%M %p}";
-        "format-alt" = "{:%I:%M %p  %A %b %d}";
-        "tooltip-format" = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+        "interval" = 1;
+        "format" = "{:%I:%M %p  %A %b %d}";
+        "tooltip" = true;
+        "tooltip-format" = "<tt>{calendar}</tt>";
       };
+      # "clock" = {
+      #   "format" = "{:%I:%M %p}";
+      #   "format-alt" = "{:%I:%M %p  %A %b %d}";
+      #   "tooltip-format" = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+      # };
       "memory" = {
         "interval" = 1;
         "format" = " {percentage}%";
@@ -220,7 +222,7 @@
       };
       "tray" = {
         "icon-size" = 12;
-        "spacing" = 10;
+        "spacing" = 16;
       };
     }];
   };

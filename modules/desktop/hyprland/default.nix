@@ -1,5 +1,6 @@
-{ inputs, pkgs, ... }: {
+{ inputs, pkgs, ... }:
 
+{
   imports = [
     inputs.hyprland.homeManagerModules.default
   ];
@@ -174,35 +175,29 @@
       windowrule=float,Zoom-us
       windowrule=float,title:^(zoom)$
       windowrule=float,title:^(Picture-in-Picture)$
-      windowrule=size 960 540,title:^(Picture-in-Picture)$
-      windowrule=move 25%-,title:^(Picture-in-Picture)$
+      # windowrule=size 960 540,title:^(Picture-in-Picture)$
+      # windowrule=move 25%-,title:^(Picture-in-Picture)$
       windowrule=float,imv
-      windowrule=move 25%-,imv
-      windowrule=size 960 540,imv
+      # windowrule=move 25%-,imv
+      # windowrule=size 960 540,imv
       windowrule=float,mpv
-      windowrule=move 25%-,mpv
-      windowrule=size 960 540,mpv
+      # windowrule=move 25%-,mpv
+      # windowrule=size 960 540,mpv
       windowrule=float,thunar
-      windowrule=move 25%-,thunar
-      windowrule=size 960 540,thunar
+      # windowrule=move 25%-,thunar
+      # windowrule=size 960 540,thunar
       windowrule=float,pavucontrol
-      windowrule=move 25%-,pavucontrol
-      windowrule=size 960 540,pavucontrol
+      # windowrule=move 25%-,pavucontrol
+      # windowrule=size 960 540,pavucontrol
       windowrule=float,bleachbit
-      windowrule=move 25%-,bleachbit
-      windowrule=size 960 540,bleachbit
+      # windowrule=move 25%-,bleachbit
+      # windowrule=size 960 540,bleachbit
       windowrule=animation popin,kitty
       windowrule=noblur,^(firefox)$
 
 
       # autostart
-      exec-once = waybar &
-      exec-once = swww init && swww img .local/share/wallpapers/4.gif && my-swaylock &
-      exec-once = mako &
-      exec-once = wl-paste --type text --watch cliphist store &
-      exec-once = wl-paste --type image --watch cliphist store &
-      # exec-once = sleep 1 
-      exec-once = nm-applet --indicator &
+      exec-once = swww init && swww img .local/share/wallpapers/4.gif && my-swaylock && waybar &&  mako && nm-applet --indicator &
     '';
   };
 }
