@@ -28,12 +28,10 @@
         padding-left: 0px;
         padding-right: 4px;
         border-radius: 0px;
-        padding-top: 2px;
-        padding-bottom: 2px;
       }
       #workspaces button {
-        padding-top: 2px;
-        padding-bottom: 2px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         padding-left: 6px;
         padding-right: 6px;
       }
@@ -72,8 +70,8 @@
       {
         padding-left: 8px;
         padding-right: 8px;
-        padding-top: 1px;
-        padding-bottom: 1px;
+        padding-top: 0px;
+        padding-bottom: 0px;
       }
       #mode {
         margin-left: 10px;

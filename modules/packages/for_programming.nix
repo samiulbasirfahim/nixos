@@ -9,7 +9,7 @@
     gcc
     nix-prefetch-github
     vscode
-    neovim
+    # neovim
     typescript
     rnix-lsp
     # rust

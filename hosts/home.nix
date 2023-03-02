@@ -8,6 +8,7 @@
     [ (import ./../modules/wallpapers) ] ++
     [ (import ./../modules/scripts) ] ++
     [ (import ./../modules/programs) ];
+    
   home.username = "fahim";
   home.homeDirectory = "/home/fahim";
   home.stateVersion = "22.11";

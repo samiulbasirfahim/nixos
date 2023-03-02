@@ -1,4 +1,4 @@
-{ username, hostname, inputs, self, nixpkgs, ... }:
+{ username, hostname, inputs, self, nixpkgs, nur, ... }:
 
 let
   system = "x86_64-linux";
@@ -26,6 +26,7 @@ in
             overlays =
               [
                 self.overlays.default
+                nur.overlay
               ];
           };
         }

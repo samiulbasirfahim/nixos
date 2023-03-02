@@ -3,7 +3,7 @@
   imports = 
     [(import ./kitty)] ++
     [(import ./neofetch)] ++
-    [(import ./neovim)] ++
+    # [(import ./nvim)] ++
     [(import ./fish)] ++
     [(import ./starship)] ++
     [(import ./cava)];

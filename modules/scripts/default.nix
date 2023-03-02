@@ -23,7 +23,8 @@ let
   '';
 in
 {
-  home.file.".local/bin/toggle-sound-output".source = ./toggle-sound-output;
+  home.file.".local/bin/toggle_hyprland_layout".source = ./toggle_hyprland_layout;
+  home.file.".local/bin/toggle_sound_output".source = ./toggle_sound_output;
   home.packages = with pkgs; [
     wall-change
     my-swaylock

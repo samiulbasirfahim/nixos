@@ -48,8 +48,8 @@
         no_gaps_when_only = false
       }
       decoration {
-        active_opacity = 1.0
-        inactive_opacity = 1.0
+        active_opacity = 0.98
+        inactive_opacity = 0.96
         fullscreen_opacity = 1.0
         rounding = 0
         blur = 0
@@ -59,12 +59,12 @@
       }
       animations {
         enabled=1
-        bezier = overshot, 0.13, 0.99, 0.29, 1
-        animation = windows, 1, 4, overshot, slide
-        animation = windowsOut, 1, 5, default, popin 50%
-        animation = border, 1, 5, default
-        animation = fade, 1, 8, default
-        animation = workspaces, 1, 6, overshot, slidevert
+        bezier = overshot, 0.1, 0.4, 0.8, 0.98
+        animation = windows, 1, 2, overshot, slide
+        animation = windowsOut, 1, 3, default, popin 10%
+        animation = border, 1, 3, default
+        animation = fade, 1, 4, default
+        animation = workspaces, 1, 3, overshot, slidevert
       }
 
 
@@ -85,11 +85,7 @@
       bind = $mainMod, B, exec, pkill -SIGUSR1 .waybar-wrapped
       bind = $mainMod SHIFT, c ,exec, hyprpicker -a
       bind = $mainMod SHIFT, Return, exec, kitty fish --start-as=fullscreen
-
-      # ----------------------------------------------------------------
-      # gap
-      bind = $mainMod SHIFT, G,exec,hyprctl --batch "keyword general:gaps_out 5;keyword general:gaps_in 3"
-      bind = $mainMod , G,exec,hyprctl --batch "keyword general:gaps_out 0;keyword general:gaps_in 0"
+      bind = $mainMod , G,exec, $HOME/.local/bin/toggle_hyprland_layout
 
       # ----------------------------------------------------------------
       # screenshot

@@ -2,6 +2,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     hyprpicker.url = "github:hyprwm/hyprpicker";
+    nur.url = "github:nix-community/NUR";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -12,7 +13,7 @@
     };
   };
 
-  outputs = {self, nixpkgs, ... }@inputs:
+  outputs = {self, nixpkgs, nur, ... }@inputs:
     let
       username = "fahim";
       hostname = "nixos";
@@ -22,7 +23,7 @@
       overlays.default = selfPkgs.overlay;
       nixosConfigurations = (
         import ./hosts {
-          inherit self inputs nixpkgs username hostname;
+          inherit self inputs nixpkgs username hostname nur;
         }
       );
     };
