@@ -164,7 +164,7 @@
         };
         "on-click" = "pamixer -t";
         "on-click-right" = "pavucontrol";
-        "on-click-middle" = "$HOME/.local/bin/toggle-sound-output";
+        "on-click-middle" = "$HOME/.local/bin/toggle_sound_output";
         "tooltip" = false;
       };
       "pulseaudio#microphone" = {
@@ -220,7 +220,7 @@
       };
       "tray" = {
         "icon-size" = 12;
-        "spacing" = 16;
+        "spacing" = 10;
       };
     }];
   };

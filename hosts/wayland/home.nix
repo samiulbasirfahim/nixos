@@ -2,12 +2,12 @@
 
 {
   imports =
-    [ (import ./../modules/desktop) ] ++
-    [ (import ./../modules/gtk) ] ++
-    [ (import ./../modules/packages) ] ++
-    [ (import ./../modules/wallpapers) ] ++
-    [ (import ./../modules/scripts) ] ++
-    [ (import ./../modules/programs) ];
+    [ (import ./../../modules/gtk) ] ++
+    [ (import ./../../modules/packages) ] ++
+    [ (import ./../../modules/wallpapers) ] ++
+    [ (import ./../../modules/scripts) ] ++
+    [ (import ./../../modules/desktop/wayland) ] ++
+    [ (import ./../../modules/programs) ];
     
   home.username = "fahim";
   home.homeDirectory = "/home/fahim";

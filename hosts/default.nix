@@ -10,9 +10,10 @@ let
 
 in
 {
-  nixos = nixpkgs.lib.nixosSystem {
+  wayland = nixpkgs.lib.nixosSystem {
     specialArgs = { inherit self inputs username; };
-    modules = [ (import ./nixos) ] ++
+    modules = [ (import ./system.nix) ] ++
+      [ (import ./wayland/xserver.nix) ] ++
       [
         inputs.home-manager.nixosModules.home-manager
         {
@@ -20,7 +21,30 @@ in
             useUserPackages = true;
             useGlobalPkgs = true;
             extraSpecialArgs = { inherit inputs username; };
-            users.fahim = (./home.nix);
+            users.fahim = (./wayland/home.nix);
+          };
+          nixpkgs = {
+            overlays =
+              [
+                self.overlays.default
+                nur.overlay
+              ];
+          };
+        }
+      ];
+  };
+  xorg = nixpkgs.lib.nixosSystem {
+    specialArgs = { inherit self inputs username; };
+    modules = [ (import ./system.nix) ] ++
+      [ (import ./xorg/xserver.nix) ] ++
+      [
+        inputs.home-manager.nixosModules.home-manager
+        {
+          home-manager = {
+            useUserPackages = true;
+            useGlobalPkgs = true;
+            extraSpecialArgs = { inherit inputs username; };
+            users.fahim = (./xorg/home.nix);
           };
           nixpkgs = {
             overlays =

@@ -1,13 +1,23 @@
-{ lib, username, hostname, pkgs, inputs, ... }:
+{ lib, username, hostname, pkgs, inputs, config, ... }:
 
 {
   imports =
-    [ (import ./plymouth.nix) ] ++
     [ (import ./hardware-configuration.nix) ] ++
-    [ (import ./bootloader.nix) ] ++
-    [ (import ./xserver.nix) ] ++
-    [ (import ./../../modules/packages/python.nix) ] ++
-    [ (import ./hardware.nix) ];
+    [ (import ./../modules/packages/python.nix) ];
+
+
+  # bootloader configuration
+  boot.cleanTmpDir = true;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.loader.timeout = 0;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.efiSysMountPoint = "/boot/efi";
+
+  boot.plymouth.enable = true;
+  boot.plymouth.themePackages = [ pkgs.adi1090x-plymouth ];
+  boot.plymouth.theme = "loader_2";
+
 
   # basic configuration
   time.timeZone = "Asia/Dhaka";
@@ -43,6 +53,17 @@
   }];
 
 
+  # hardware configuration
+  hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.support32Bit = true;
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.opengl.enable = true;
+  hardware.opengl.driSupport = true;
+  hardware.opengl.driSupport32Bit = true;
+  hardware.opengl.extraPackages = with pkgs; [
+    amdvlk
+  ];
+
 
   # services
   services.getty.autologinUser = "fahim";
@@ -59,6 +80,24 @@
   nix.gc.automatic = true;
   nix.gc.dates = "weekly";
   nix.gc.options = "--delete-older-than 7d";
+
+  # 
+  services.xserver = {
+    enable = true;
+    videoDrivers = [ "amdgpu" ];
+    desktopManager.xterm.enable = false;
+    displayManager = {
+      autoLogin = {
+        enable = true;
+        user = "fahim";
+      };
+      gdm = {
+        enable = true;
+      };
+    };
+  };
+
+
   # users
   users.users.fahim.isNormalUser = true;
   users.users.fahim.description = "Samiul Basir Fahim";

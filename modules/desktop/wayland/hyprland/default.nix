@@ -90,7 +90,7 @@
       # ----------------------------------------------------------------
       # screenshot
       bind=,Print,exec,grim $HOME/Pictures/$(date +'%Y%m%d%H%M%S_1.png') && notify-send 'Screenshot Saved'
-      bind=$mainMod SHIFT,Print,exec,grim - wl-copy && notify-send 'Screenshot Copied to Clipboard'
+      bind=$mainMod SHIFT,Print,exec,grim - | wl-copy && notify-send 'Screenshot Copied to Clipboard'
       bind=$mainMod,Print,exec,slurp | grim -g - $HOME/Pictures/$(date +'%Y%m%d%H%M%S_1.png') && notify-send 'Screenshot Saved'
 
       # ----------------------------------------------------------------
@@ -168,6 +168,8 @@
       bind = $mainMod, mouse_up, workspace, e+1
 
       windowrule=float,zoom-us
+      windowrule=float,wlogout
+      windowrule=noanim,^(wlogout)$
       windowrule=float,Zoom-us
       windowrule=float,title:^(zoom)$
       windowrule=float,title:^(Picture-in-Picture)$
@@ -190,7 +192,7 @@
       # windowrule=size 960 540,bleachbit
       windowrule=animation popin,kitty
       windowrule=noblur,^(firefox)$
-
+      
 
       # autostart
       exec-once = swww init && swww img .local/share/wallpapers/4.gif && my-swaylock && waybar &&  mako && nm-applet --indicator &
