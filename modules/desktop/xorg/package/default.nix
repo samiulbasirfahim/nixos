@@ -8,5 +8,6 @@
     lxappearance
     betterlockscreen
     i3lock-color
+    kazam
   ];
 }

@@ -13,7 +13,7 @@
     slurp
     swww
     wl-clipboard
-    wget
     wf-recorder
+    glib
   ];
 }

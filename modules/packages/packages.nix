@@ -12,7 +12,7 @@
     xfce.thunar
     pavucontrol
     firefox
-    glib
+    wget
     vlc
     unzip
     discord
