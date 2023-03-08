@@ -146,10 +146,10 @@
       bind=SUPER SHIFT, up, movewindow, u
       bind=SUPER SHIFT, down, movewindow, d
     
-      bind=SUPER CTRL, left, resizeactive, -20 0
-      bind=SUPER CTRL, right, resizeactive, 20 0
-      bind=SUPER CTRL, up, resizeactive, 0 -20
-      bind=SUPER CTRL, down, resizeactive, 0 20
+      bind=SUPER CTRL, left, resizeactive, -40 0
+      bind=SUPER CTRL, right, resizeactive, 40 0
+      bind=SUPER CTRL, up, resizeactive, 0 -40
+      bind=SUPER CTRL, down, resizeactive, 0 40
 
       # ----------------------------------------------------------------
       # media and volume controls
