@@ -3,9 +3,13 @@
 let
   my-python-packages = p: with p; [
     pandas
+    requests
+    qrcode
     numpy
     pyautogui
-    # other python packages
+    pyttsx3
+    pip
+    # other python packagesp
   ];
 in
 {
