@@ -4,7 +4,7 @@
   programs = {
     mako = {
       enable = true;
-      font = "JetbrainsMono nerd font 12.5";
+      font = "JetbrainsMono nerd font 10.5";
       padding = "20";
       defaultTimeout = 5000;
       borderSize = 1;
