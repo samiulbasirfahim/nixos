@@ -10,7 +10,7 @@
           * {
           font-family: JetbraainsMono nerd font, FiraCode Nerd Font;
           font-weight: normal;
-          font-size: 13px;
+          font-size: 13.7px;
           min-height: 0;
           transition-property: background-color;
           transition-duration: 0.5s;
@@ -19,9 +19,11 @@
         background-color: transparent;
       }
       window > box {
-        margin-left: 5px;
-        margin-right: 5px;
-        margin-top: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 8px;
+        border: 2px solid #7EA398;
+        border-radius: 6px;
         background-color: rgb(30, 30, 46);
       }
       #workspaces {

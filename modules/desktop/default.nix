@@ -6,6 +6,5 @@
     [ (import ./mako) ] ++
     [ (import ./swaylock) ] ++
     [ (import ./waybar) ] ++
-    [ (import ./scripts) ] ++
     [ (import ./wofi) ];
 }

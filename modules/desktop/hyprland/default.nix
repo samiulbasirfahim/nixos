@@ -4,7 +4,7 @@
   imports =
     [ (import ./variables.nix) ] ++
     [ inputs.hyprland.homeManagerModules.default ];
-    
+
   systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
   wayland.windowManager.hyprland = {
     enable = true;
@@ -67,9 +67,9 @@
         col.shadow = rgba(1a1a1aee)
       }
 
-      bezier=overshot,0.7,0.6,0.1,1.1
       animations {
         enabled=1
+        bezier = overshot, 0.13, 0.99, 0.29, 1
         animation = windows, 1, 2, overshot, slide
         animation = windowsOut, 1, 3, default, popin 10%
         animation = border, 1, 3, default
@@ -200,7 +200,7 @@
       # windowrule=size 960 540,bleachbit
       windowrule=animation popin,kitty
       # autostart
-      exec-once = swww init && swww img .local/share/wallpapers/4.gif && my-swaylock && waybar &&  mako && nm-applet --indicator &
+      exec-once = swww init && swww img .local/share/wallpapers/12.jpg && swaylock && notify-send "Hey $USER, Welcome back" && waybar &&  mako && nm-applet --indicator &
     '';
   };
 }
