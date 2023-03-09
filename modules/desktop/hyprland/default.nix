@@ -53,15 +53,15 @@
 
 
       decoration {
-        active_opacity = 0.95
-        inactive_opacity = 0.9
+        active_opacity = 0.98
+        inactive_opacity = 0.96
         fullscreen_opacity = 1.0
         rounding = 6
         blur = yes
-        blur_size = 4
+        blur_size = 2
         blur_passes = 1
         blur_new_optimizations = true
-        drop_shadow = yes
+        drop_shadow = 0
         shadow_range = 4
         shadow_render_power = 3
         col.shadow = rgba(1a1a1aee)
@@ -200,7 +200,8 @@
       # windowrule=size 960 540,bleachbit
       windowrule=animation popin,kitty
       # autostart
-      exec-once = swww init && swww img .local/share/wallpapers/12.jpg && swaylock && notify-send "Hey $USER, Welcome back" && waybar &&  mako && nm-applet --indicator &
+      exec-once = swww init && swww img .local/share/wallpapers/15.jpg && sleep 0.1 && swaylock && notify-send "Hey $USER, Welcome back" && waybar &&  mako && nm-applet --indicator &
+      # exec-once = dbus-hyprland-environment &
     '';
   };
 }

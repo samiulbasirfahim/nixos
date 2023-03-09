@@ -15,5 +15,7 @@
     wl-clipboard
     wf-recorder
     glib
+    wayland
+    swayidle
   ];
 }

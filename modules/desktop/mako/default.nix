@@ -7,10 +7,10 @@
       font = "JetbrainsMono nerd font 10.5";
       padding = "20";
       defaultTimeout = 5000;
-      borderSize = 1;
-      borderRadius = 0;
+      borderSize = 2;
+      borderRadius = 6;
       backgroundColor = "#1e1e2e";
-      borderColor = "#89b4fa";
+      borderColor = "#7EA398";
       progressColor = "over #313244";
       textColor = "#cdd6f4";
       extraConfig = ''

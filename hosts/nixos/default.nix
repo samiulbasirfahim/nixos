@@ -68,6 +68,7 @@
   # services
   services.getty.autologinUser = "fahim";
   services.gvfs.enable = true;
+  # services.pipewire.enable = true;
   services.gnome.gnome-keyring.enable = true;
   services.dbus.enable = true;
 
@@ -98,7 +99,12 @@
       };
     };
   };
-
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    # gtk portal needed to make gtk apps happy
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
 
   # users
   users.users.fahim.isNormalUser = true;
