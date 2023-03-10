@@ -23,7 +23,7 @@
         margin-right: 10px;
         margin-top: 8px;
         border: 2px solid #7EA398;
-        border-radius: 6px;
+        border-radius: 0px;
         background-color: rgb(30, 30, 46);
       }
       #workspaces {

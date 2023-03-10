@@ -1,6 +1,7 @@
-{...}: {
-    imports = [
-        ./packages.nix
-        ./for_programming.nix
-    ];
+{ ... }: {
+  imports = [
+    ./packages.nix
+    ./firefox.nix
+    ./for_programming.nix
+  ];
 }

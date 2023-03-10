@@ -1,4 +1,4 @@
-{ username, hostname, inputs, self, nixpkgs, nur, ... }:
+{ username, hostname, inputs, self, nixpkgs, ... }:
 
 let
   system = "x86_64-linux";
@@ -12,8 +12,10 @@ in
 {
   nixos = nixpkgs.lib.nixosSystem {
     specialArgs = { inherit self inputs username; };
-    modules = [ (import ./nixos) ] ++
+    modules =
+      [ (import ./nixos) ] ++
       [
+        inputs.nur.nixosModules.nur
         inputs.home-manager.nixosModules.home-manager
         {
           home-manager = {
@@ -26,7 +28,6 @@ in
             overlays =
               [
                 self.overlays.default
-                nur.overlay
               ];
           };
         }

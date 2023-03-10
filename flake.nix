@@ -7,13 +7,14 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
     hyprland = {
       url = "github:hyprwm/hyprland/v0.20.1beta";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = {self, nixpkgs, nur, ... }@inputs:
+  outputs = { self, nixpkgs, nur, ... }@inputs:
     let
       username = "fahim";
       hostname = "nixos";

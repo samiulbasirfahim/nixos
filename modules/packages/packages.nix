@@ -1,9 +1,9 @@
-{ pkgs
-, inputs
-, xdg-hyprland
-, ...
-}: {
-  home.packages = with pkgs; [
+{ pkgs, inputs, ... }:
+
+
+{
+  home.packages = (with pkgs; [
+    # nur.repos.mic92.hello-nur
     libnotify
     rnix-lsp
     ranger
@@ -11,9 +11,7 @@
     pamixer
     xfce.thunar
     pavucontrol
-    firefox
     wget
-    vlc
     unzip
     discord
     gparted
@@ -32,5 +30,6 @@
     htop
     zoom-us
     xdg-utils
-  ];
+    # microsoft-edge
+  ]);
 }

@@ -56,7 +56,7 @@
         active_opacity = 0.98
         inactive_opacity = 0.96
         fullscreen_opacity = 1.0
-        rounding = 6
+        rounding = 0
         blur = yes
         blur_size = 2
         blur_passes = 1

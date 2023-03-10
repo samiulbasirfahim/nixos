@@ -13,6 +13,7 @@
     neovide
     typescript
     rnix-lsp
+    ripgrep
     # rust
     ];
 }

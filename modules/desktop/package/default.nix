@@ -11,7 +11,6 @@
     wlogout
     grim
     slurp
-    swww
     wl-clipboard
     wf-recorder
     glib

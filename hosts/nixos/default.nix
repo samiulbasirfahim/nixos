@@ -22,7 +22,7 @@
   # basic configuration
   time.timeZone = "Asia/Dhaka";
   i18n.defaultLocale = "en_US.UTF-8";
-  sound.enable = true;
+  # sound.enable = true;
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "22.11";
 
@@ -56,7 +56,6 @@
   # hardware configuration
   hardware.pulseaudio.enable = true;
   hardware.pulseaudio.support32Bit = true;
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   hardware.opengl.enable = true;
   hardware.opengl.driSupport = true;
   hardware.opengl.driSupport32Bit = true;
@@ -68,7 +67,6 @@
   # services
   services.getty.autologinUser = "fahim";
   services.gvfs.enable = true;
-  # services.pipewire.enable = true;
   services.gnome.gnome-keyring.enable = true;
   services.dbus.enable = true;
 
@@ -81,7 +79,21 @@
   nix.gc.automatic = true;
   nix.gc.dates = "weekly";
   nix.gc.options = "--delete-older-than 7d";
+  nix.settings = {
+    substituters = [
+      "https://cache.nixos.org"
+      "https://nixpkgs-wayland.cachix.org"
+      "https://nix-community.cachix.org"
+      "https://hyprland.cachix.org"
+    ];
 
+    trusted-public-keys = [
+      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+      "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+    ];
+  };
   # 
   services.xserver = {
     enable = true;
@@ -101,9 +113,11 @@
   };
   xdg.portal = {
     enable = true;
-    wlr.enable = true;
-    # gtk portal needed to make gtk apps happy
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    wlr.enable = false;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+      inputs.xdg-portal-hyprland.packages.${pkgs.system}.default
+    ];
   };
 
   # users
@@ -113,11 +127,14 @@
   users.users.fahim.extraGroups = [ "networkmanager" "wheel" ];
   users.users.fahim.shell = pkgs.fish;
   security.pam.services.swaylock = { };
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = (with pkgs; [
     git
     twemoji-color-font
     networkmanagerapplet
-  ];
+    # microsoft-edge
+  ]) ++ (with config.nur.repos;[
+    # aleksana.gtkcord4
+  ]);
   fonts = {
     fonts = with pkgs; [
       noto-fonts
