@@ -11,7 +11,7 @@
     hyprland = {
       url = "github:hyprwm/hyprland/v0.20.1beta";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
+    }; 
   };
 
   outputs = { self, nixpkgs, nur, ... }@inputs:
